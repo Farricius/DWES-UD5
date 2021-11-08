@@ -1,0 +1,30 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Panel Usuario</title>
+</head>
+
+<body>
+    <h2>La sesion creada correctamente</h2>
+    <p>
+        <?php
+        if (isset($_POST['nombre'])) {
+            $_SESSION['nombre'] = $_POST['nombre'];
+            echo "Bienvenido! Has iniciado sesion como:<b> " . $_POST['nombre'] . "</b>";
+        } else {
+            if (isset($_SESSION['nombre'])) {
+                echo "Has iniciado Sesion como: " . $_SESSION['nombre'];
+            } else {
+                // Si la sesion expiro o no se creo  mostraremos el siguiente mensaje
+                echo "Error · Acceso Restringido";
+            }
+        }
+        ?></p>
+    <p><a href="ejemplo_session1.php">Ir a la página inicial</a></p>
+    <p><a href='ejemplo_session3.php'>Cerrar Sesion</a></p>
+</body>
+
+</html>
