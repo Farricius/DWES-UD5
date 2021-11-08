@@ -1,1 +1,32 @@
-Cookies
+Total horas:
+20
+
+Resultados de aprendizaje: 
+
+RA4:Desarrolla aplicaciones Web embebidas en lenguajes de marcas analizando e incorporando funcionalidades según especificaciones.
+Criterios de evaluación:
+Se han identificado los mecanismos disponibles para el mantenimiento de la información que concierne a un cliente Web concreto y se han señalado sus ventajas.
+Se han utilizado sesiones para mantener el estado de las aplicaciones Web.
+Se han utilizado «cookies» para almacenar información en el cliente Web y para recuperar su contenido.
+Se han identificado y caracterizado los mecanismos disponibles para la autentificación de usuarios.
+Se han escrito aplicaciones que integren mecanismos de autentificación de usuarios.
+Se han realizado adaptaciones a aplicaciones Web existentes como gestores de contenidos u otras.
+Se han utilizado herramientas y entornos para facilitar la programación, prueba y depuración del código.
+Contenidos:
+
+
+Desarrollo de aplicaciones Web utilizando código embebido:
+Mantenimiento del estado. Sesiones. Cookies.
+Seguridad: usuarios, perfiles, roles.
+Mecanismos de autentificación de usuarios.
+Adaptación a aplicaciones Web: Gestores de contenidos y tiendas virtuales entre otras.
+Pruebas y depuración. Herramientas y entornos.
+
+Peso respecto a la nota final:
+10%
+
+Evaluación:
+Actividades de clase 10%
+Actividad individual - Modificación aplicación web 10%
+Actividad grupal - Aplicación web desde cero 10%
+Prueba práctica 70%
