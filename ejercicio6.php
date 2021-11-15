@@ -17,14 +17,14 @@
     $contraseña = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $usuario = $_POST["usuario"];
-        $contraseña = $_POST["contraseña"];
+        $usuario = $_POST["usuario"]; // html name
+        $contraseña = $_POST["contraseña"]; // html name
         $contraseña = password_hash($contraseña, PASSWORD_DEFAULT);
 
         $datos = getUser($usuario);
-        
+
         if ($datos) {
-            //$contraseniaEncr = $datos["Contrasenia"];
+            $contraseniaEncr = $datos["Contrasenia"]; // bd Contrasenia
             $retorno = password_verify($contraseña, $contraseniaEncr);
 
             if ($retorno) {

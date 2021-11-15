@@ -6,16 +6,15 @@ $user = "developer";
 $pass = "developer";
 
 
-function insertaElemento($NombreUsuario, $Contraseña, $CuentaBancaria)
+function insertaElemento($NombreUsuario, $Contrasenia, $CuentaBancaria)
 {
-
     try {
         $conexion = new PDO('mysql:host=' . $GLOBALS["servidor"] . ';dbname=' . $GLOBALS["baseDatos"], $GLOBALS["user"], $GLOBALS["pass"]);
-        $consulta = $conexion->prepare("INSERT INTO banco (NombreUsuario, Contrasenia, CuentaBancaria) VALUES (?,?,?)");
-        $consulta->bindParam(1, $NombreUsuario);
-        $consulta->bindParam(2, $Contraseña);
-        $consulta->bindParam(3, $CuentaBancaria);
-        $consulta->execute();
+        $sql = $conexion->prepare("INSERT INTO banco (NombreUsuario, Contrasenia, CuentaBancaria) VALUES (?,?,?)");
+        $sql->bindParam(1, $NombreUsuario);
+        $sql->bindParam(2, $Contrasenia);
+        $sql->bindParam(3, $CuentaBancaria);
+        $sql->execute();
         $last_id = $conexion -> lastInsertId();
         return $last_id;
     } catch (PDOException $e) {
@@ -24,4 +23,3 @@ function insertaElemento($NombreUsuario, $Contraseña, $CuentaBancaria)
     }
     $conexion = null;
 }
-?>
